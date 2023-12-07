@@ -1,0 +1,31 @@
+.modal {
+    position: absolute;
+    top: 72%;
+    left: 82.5%;
+    width: 10rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 9px;
+  
+    // padding: 1.4rem 2.3rem;
+    padding: 1.4rem 2.1rem;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
+    // z-index: 1000;
+    transition: all 0.5s;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.btn--delete {
+    padding: 1px 3px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn--delete:hover {
+    background-color: red;
+    color: white;
+}
