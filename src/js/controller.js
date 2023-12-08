@@ -15,10 +15,6 @@ import 'regenerator-runtime/runtime'; //polyfill async await
 
 ///////////////////////////////////////
 
-// if(module.hot){
-//   module.hot.accept();
-// }
-
 const controlRecipes = async function() {
   try{
     const id = window.location.hash.slice(1);
@@ -83,7 +79,6 @@ const controlServings = function(newServings) {
   model.updateServings(newServings);
 
   // update recipe view
-  // recipeView.render(model.state.recipe);
   recipeView.update(model.state.recipe);
 };
 
@@ -144,10 +139,6 @@ const controlDeleteRecipe = async function() {
   location.reload();
 };
 
-const newFeature = function() {
-  console.log('Welcome to the application!');
-};
-
 const init = function() {
   bookMarksView.addhandlerRender(controlBookmarks);
   recipeView.addHandlerUpdateServings(controlServings);
@@ -158,6 +149,5 @@ const init = function() {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  newFeature();
 };
 init();
